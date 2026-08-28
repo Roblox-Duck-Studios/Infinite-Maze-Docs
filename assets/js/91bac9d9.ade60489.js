@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[1919],{23077:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"server/replicator","desc":"The server half of the shared replecs replicator.","tags":["server-system"],"realm":["Server"],"source":{"line":8,"path":"src/main/server/replicator.luau"}}')}}]);

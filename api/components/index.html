@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="plugin-moonwave plugin-id-moonwave" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.1">
+<title data-rh="true">components | Infinite Maze V3</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://Roblox-Duck-Studios.github.io/Infinite-Maze-V3/api/components"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="components | Infinite Maze V3"><meta data-rh="true" name="description" content="Central jecs component registry. Every component, relationship and component
+singleton used anywhere in the game is declared here, named for Jabby, and
+flagged for replication where the client needs it."><meta data-rh="true" property="og:description" content="Central jecs component registry. Every component, relationship and component
+singleton used anywhere in the game is declared here, named for Jabby, and
+flagged for replication where the client needs it."><link data-rh="true" rel="canonical" href="https://Roblox-Duck-Studios.github.io/Infinite-Maze-V3/api/components"><link data-rh="true" rel="alternate" href="https://Roblox-Duck-Studios.github.io/Infinite-Maze-V3/api/components" hreflang="en"><link data-rh="true" rel="alternate" href="https://Roblox-Duck-Studios.github.io/Infinite-Maze-V3/api/components" hreflang="x-default"><link rel="stylesheet" href="/Infinite-Maze-V3/assets/css/styles.e8e96400.css">
+<script src="/Infinite-Maze-V3/assets/js/runtime~main.df7f14fd.js" defer="defer"></script>
+<script src="/Infinite-Maze-V3/assets/js/main.b51d18d2.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Infinite-Maze-V3/"><b class="navbar__title text--truncate">Infinite Maze V3</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Infinite-Maze-V3/api/">API</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/Roblox-Duck-Studios/Infinite-Maze-V3" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input id="search_input_react" type="search" placeholder="Loading..." aria-label="Search" class="navbar__search-input search-bar" disabled=""></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0 docPageContainer_wNNk"><div class="docPage_Dpn1"><div class="docSidebarContainer_o_re"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Infinite-Maze-V3/api/bootstrap"><span title="Core" class="categoryLinkLabel_W154">Core</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Infinite-Maze-V3/api/bootstrap"><span title="bootstrap" class="linkLabel_WmDU">bootstrap</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Infinite-Maze-V3/api/client"><span title="client" class="linkLabel_WmDU">client</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Infinite-Maze-V3/api/components"><span title="components" class="linkLabel_WmDU">components</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Infinite-Maze-V3/api/scheduler"><span title="scheduler" class="linkLabel_WmDU">scheduler</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Infinite-Maze-V3/api/server"><span title="server" class="linkLabel_WmDU">server</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Infinite-Maze-V3/api/startup"><span title="startup" class="linkLabel_WmDU">startup</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Infinite-Maze-V3/api/world"><span title="world" class="linkLabel_WmDU">world</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/Infinite-Maze-V3/api/build"><span title="Server" class="categoryLinkLabel_W154">Server</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/Infinite-Maze-V3/api/apply/maze-position"><span title="Shared" class="categoryLinkLabel_W154">Shared</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/Infinite-Maze-V3/api/client/replicator"><span title="Client" class="categoryLinkLabel_W154">Client</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/Infinite-Maze-V3/api/mazeConstants"><span title="Common" class="categoryLinkLabel_W154">Common</span></a></div></li></ul></nav></div></div><main class="docMainContainer_HJE1"><div class="container padding-vert--lg"><div class="row"><div class="col docItemCol_MU3C"><div class="docItemContainer_Wv98"><article><div class="member_J0w1 markdown"><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_oUs_"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><header><h1 class="docTitle_mZRt" style="text-decoration:none"><span style="display:inline-block">components</span></h1><div class="luaClassTags_EipM"><span class="docTag__6UZ" style="border-color:#ff793f;color:#ff793f">core</span></div><div>
+<p>
+  Central jecs component registry. Every component, relationship and component
+  singleton used anywhere in the game is declared here, named for Jabby, and
+  flagged for replication where the client needs it.
+</p>
+</div></header><h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="types">Types<a href="#types" class="hash-link" aria-label="Direct link to Types" title="Direct link to Types" translate="no">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="MazePosition"><code style="text-decoration:none">MazePosition</code><a href="#MazePosition" class="hash-link" aria-label="Direct link to MazePosition" title="Direct link to MazePosition" translate="no">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Roblox-Duck-Studios/Infinite-Maze-V3/blob/master/src/main/shared/components.luau#L28"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>MazePosition<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>x<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>Cell column in world-cell space.</p>
+</span></span></div><div><code>y<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>Cell row in world-cell space.</p>
+</span></span></div></div><code>}</code></div><div>
+<p>A position measured in maze cells rather than studs.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="Placement"><code style="text-decoration:none">Placement</code><a href="#Placement" class="hash-link" aria-label="Direct link to Placement" title="Direct link to Placement" translate="no">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Roblox-Duck-Studios/Infinite-Maze-V3/blob/master/src/main/shared/components.luau#L38"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">type</code> <code>Placement<!-- --> = </code> <code class="blue_P4bS">mazeTypes.Placement</code></div><div>
+<p>
+  Re-exported from <a href="/Infinite-Maze-V3/api/mazeTypes">mazeTypes</a> so the generation passes can name it without
+  requiring this module, and so every existing <code>components.Placement</code> keeps
+  resolving. See <a href="/Infinite-Maze-V3/api/mazeTypes">mazeTypes</a> for why it lives there.
+</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="MazeConfig"><code style="text-decoration:none">MazeConfig</code><a href="#MazeConfig" class="hash-link" aria-label="Direct link to MazeConfig" title="Direct link to MazeConfig" translate="no">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Roblox-Duck-Studios/Infinite-Maze-V3/blob/master/src/main/shared/components.luau#L46"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">type</code> <code>MazeConfig<!-- --> = </code> <code class="blue_P4bS">mazeTypes.MazeConfig</code></div><div>
+<p>Re-exported from <a href="/Infinite-Maze-V3/api/mazeTypes">mazeTypes</a>; see there for why.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="MazeFrame"><code style="text-decoration:none">MazeFrame</code><a href="#MazeFrame" class="hash-link" aria-label="Direct link to MazeFrame" title="Direct link to MazeFrame" translate="no">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Roblox-Duck-Studios/Infinite-Maze-V3/blob/master/src/main/shared/components.luau#L60"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>MazeFrame<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>deadline<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p><code>os.clock()</code> value every stage stops at.</p>
+</span></span></div></div><code>}</code></div><div>
+<p>This frame's shared allowance, stamped once by the <code>frame</code> system.</p>
+<p>
+  Every budgeted stage stops at the same instant, so the pipeline as a whole
+  cannot exceed <code>frameMs</code> no matter how the work is distributed. Stages that
+  run late in the phase order get whatever earlier stages left, which is what
+  makes phase order the priority order.
+</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="MazeStreaming"><code style="text-decoration:none">MazeStreaming</code><a href="#MazeStreaming" class="hash-link" aria-label="Direct link to MazeStreaming" title="Direct link to MazeStreaming" translate="no">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Roblox-Duck-Studios/Infinite-Maze-V3/blob/master/src/main/shared/components.luau#L80"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>MazeStreaming<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>positions<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Infinite-Maze-V3/api/geometry#MazePosition">MazePosition</a></code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>One entry per observer, in world-cell space.</p>
+</span></span></div><div><code>chunkFrames<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Infinite-Maze-V3/api/geometry#MazePosition">MazePosition</a></code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>The same observers snapped to chunk coordinates.</p>
+</span></span></div><div><code>blockFrames<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Infinite-Maze-V3/api/geometry#MazePosition">MazePosition</a></code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>Scratch buffer reused per chunk for detail-block distance.</p>
+</span></span></div><div><code>signature<!-- -->: </code><code class="blue_P4bS">string?</code><span class="inlineDescription_G7Er">-- <span>
+<p>Detail-block fingerprint of the last processed frame.</p>
+</span></span></div><div><code>resyncNeeded<!-- -->: </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>Observers moved far enough to warrant a streaming pass.</p>
+</span></span></div><div><code>loadsOutstanding<!-- -->: </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>The load system ran out of budget with work left.</p>
+</span></span></div><div><code>promotionsDeferred<!-- -->: </code><code class="blue_P4bS">boolean</code><span class="inlineDescription_G7Er">-- <span>
+<p>The detail system hit its in-flight job cap.</p>
+</span></span></div></div><code>}</code></div><div>
+<p>Everything the streaming pipeline needs to know about where players are.</p>
+<p>
+  Each field has exactly one writer: <code>observers</code> writes the positions, frames,
+  signature and <code>resyncNeeded</code>; <code>load</code> writes <code>loadsOutstanding</code>; <code>detail</code>
+  writes <code>promotionsDeferred</code>. Keep it that way — the single-writer rule is
+  what stops this becoming a hidden global again.
+</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="GeneratedMaze"><code style="text-decoration:none">GeneratedMaze</code><a href="#GeneratedMaze" class="hash-link" aria-label="Direct link to GeneratedMaze" title="Direct link to GeneratedMaze" translate="no">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Roblox-Duck-Studios/Infinite-Maze-V3/blob/master/src/main/shared/components.luau#L100"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>GeneratedMaze<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>chunkX<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>Chunk column.</p>
+</span></span></div><div><code>chunkY<!-- -->: </code><code class="blue_P4bS">number</code><span class="inlineDescription_G7Er">-- <span>
+<p>Chunk row.</p>
+</span></span></div><div><code>entity<!-- -->: </code><code class="blue_P4bS">Entity</code><span class="inlineDescription_G7Er">-- <span>
+<p>The chunk entity carrying this chunk's components.</p>
+</span></span></div><div><code>maze<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Infinite-Maze-V3/api/grid#Maze">Maze</a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The full 2D cell array for this chunk.</p>
+</span></span></div></div><code>}</code></div><div>
+<p>One generated chunk, paired with the entity that represents it.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="GeneratedMazes"><code style="text-decoration:none">GeneratedMazes</code><a href="#GeneratedMazes" class="hash-link" aria-label="Direct link to GeneratedMazes" title="Direct link to GeneratedMazes" translate="no">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Roblox-Duck-Studios/Infinite-Maze-V3/blob/master/src/main/shared/components.luau#L113"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">type</code> <code>GeneratedMazes<!-- --> = </code> <code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">string</code><code>]</code></span><code>: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="/Infinite-Maze-V3/api/components#GeneratedMaze">GeneratedMaze</a></code><code class="purple_ieR2">}</code></div><div>
+<p>Every generated chunk, keyed by <code>"chunkX,chunkY"</code>.</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="BuildQueues"><code style="text-decoration:none">BuildQueues</code><a href="#BuildQueues" class="hash-link" aria-label="Direct link to BuildQueues" title="Direct link to BuildQueues" translate="no">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Roblox-Duck-Studios/Infinite-Maze-V3/blob/master/src/main/shared/components.luau#L124"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>BuildQueues<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>demolitionOrder<!-- -->: </code><code class="purple_ieR2">{</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Folder" target="_blank" rel="noopener noreferrer">Folder<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>Folders being torn down piecewise, newest last.</p>
+</span></span></div><div><code>demolishing<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Folder" target="_blank" rel="noopener noreferrer">Folder<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>Folders already claimed by demolition.</p>
+</span></span></div></div><code>}</code></div><div>
+<p>
+  Deferred teardown, drained under a frame budget so a chunk unload never lands
+  as one atomic hitch.
+</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="BuildAssets"><code style="text-decoration:none">BuildAssets</code><a href="#BuildAssets" class="hash-link" aria-label="Direct link to BuildAssets" title="Direct link to BuildAssets" translate="no">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Roblox-Duck-Studios/Infinite-Maze-V3/blob/master/src/main/shared/components.luau#L142"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>BuildAssets<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>prefabRoot<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p><code>ServerStorage.Prefab.maze</code>, the source of every placeable model.</p>
+</span></span></div><div><code>mazeFolder<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Folder" target="_blank" rel="noopener noreferrer">Folder<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>The workspace folder every chunk folder is parented to.</p>
+</span></span></div><div><code>wallTemplate<!-- -->: </code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/class/Part" target="_blank" rel="noopener noreferrer">Part<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><span class="inlineDescription_G7Er">-- <span>
+<p>Pre-styled part cloned for each wall run.</p>
+</span></span></div></div><code>}</code></div><div>
+<p>Shared handles the builder needs, resolved once by the <code>bootstrap</code> system.</p>
+<p>
+  These live in a component rather than as module upvalues because resolving
+  them means waiting on ServerStorage and creating instances — work that must
+  not happen at require time.
+</p>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="PrefabCache"><code style="text-decoration:none">PrefabCache</code><a href="#PrefabCache" class="hash-link" aria-label="Direct link to PrefabCache" title="Direct link to PrefabCache" translate="no">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/Roblox-Duck-Studios/Infinite-Maze-V3/blob/master/src/main/shared/components.luau#L157"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>PrefabCache<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>partCounts<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS"><a style="text-decoration:underline;color:inherit" href="https://developer.roblox.com/en-us/api-reference/datatype/Instance" target="_blank" rel="noopener noreferrer">Instance<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound" style="color:gray;vertical-align:middle;margin-left:2px"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></code><code>]</code></span><code>: </code><code class="blue_P4bS">number</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p>Memoized <code>BasePart</code> count per prefab.</p>
+</span></span></div><div><code>warnedMissing<!-- -->: </code><code class="purple_ieR2">{</code><span><code>[</code><code class="blue_P4bS">string</code><code>]</code></span><code>: </code><code class="blue_P4bS">boolean</code><code class="purple_ieR2">}</code><span class="inlineDescription_G7Er">-- <span>
+<p><code>"folder/name"</code> keys already warned about.</p>
+</span></span></div></div><code>}</code></div><div>
+<p>
+  Memoization for prefab inspection, which is pure but expensive enough that
+  recomputing it per placement shows up in a profile.
+</p>
+</div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
+    &quot;functions&quot;: [],
+    &quot;properties&quot;: [],
+    &quot;types&quot;: [
+        {
+            &quot;name&quot;: &quot;MazePosition&quot;,
+            &quot;desc&quot;: &quot;A position measured in maze cells rather than studs.&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;x&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;Cell column in world-cell space.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;y&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;Cell row in world-cell space.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 28,
+                &quot;path&quot;: &quot;src/main/shared/components.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;Placement&quot;,
+            &quot;desc&quot;: &quot;Re-exported from [mazeTypes] so the generation passes can name it without\nrequiring this module, and so every existing `components.Placement` keeps\nresolving. See [mazeTypes] for why it lives there.&quot;,
+            &quot;lua_type&quot;: &quot;mazeTypes.Placement&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 38,
+                &quot;path&quot;: &quot;src/main/shared/components.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;MazeConfig&quot;,
+            &quot;desc&quot;: &quot;Re-exported from [mazeTypes]; see there for why.&quot;,
+            &quot;lua_type&quot;: &quot;mazeTypes.MazeConfig&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 46,
+                &quot;path&quot;: &quot;src/main/shared/components.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;MazeFrame&quot;,
+            &quot;desc&quot;: &quot;This frame&#x27;s shared allowance, stamped once by the `frame` system.\n\nEvery budgeted stage stops at the same instant, so the pipeline as a whole\ncannot exceed `frameMs` no matter how the work is distributed. Stages that\nrun late in the phase order get whatever earlier stages left, which is what\nmakes phase order the priority order.&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;deadline&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;`os.clock()` value every stage stops at.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 60,
+                &quot;path&quot;: &quot;src/main/shared/components.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;MazeStreaming&quot;,
+            &quot;desc&quot;: &quot;Everything the streaming pipeline needs to know about where players are.\n\nEach field has exactly one writer: `observers` writes the positions, frames,\nsignature and `resyncNeeded`; `load` writes `loadsOutstanding`; `detail`\nwrites `promotionsDeferred`. Keep it that way — the single-writer rule is\nwhat stops this becoming a hidden global again.&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;positions&quot;,
+                    &quot;lua_type&quot;: &quot;{ MazePosition }&quot;,
+                    &quot;desc&quot;: &quot;One entry per observer, in world-cell space.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;chunkFrames&quot;,
+                    &quot;lua_type&quot;: &quot;{ MazePosition }&quot;,
+                    &quot;desc&quot;: &quot;The same observers snapped to chunk coordinates.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;blockFrames&quot;,
+                    &quot;lua_type&quot;: &quot;{ MazePosition }&quot;,
+                    &quot;desc&quot;: &quot;Scratch buffer reused per chunk for detail-block distance.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;signature&quot;,
+                    &quot;lua_type&quot;: &quot;string?&quot;,
+                    &quot;desc&quot;: &quot;Detail-block fingerprint of the last processed frame.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;resyncNeeded&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;,
+                    &quot;desc&quot;: &quot;Observers moved far enough to warrant a streaming pass.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;loadsOutstanding&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;,
+                    &quot;desc&quot;: &quot;The load system ran out of budget with work left.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;promotionsDeferred&quot;,
+                    &quot;lua_type&quot;: &quot;boolean&quot;,
+                    &quot;desc&quot;: &quot;The detail system hit its in-flight job cap.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 80,
+                &quot;path&quot;: &quot;src/main/shared/components.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;GeneratedMaze&quot;,
+            &quot;desc&quot;: &quot;One generated chunk, paired with the entity that represents it.&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;chunkX&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;Chunk column.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;chunkY&quot;,
+                    &quot;lua_type&quot;: &quot;number&quot;,
+                    &quot;desc&quot;: &quot;Chunk row.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;entity&quot;,
+                    &quot;lua_type&quot;: &quot;Entity&quot;,
+                    &quot;desc&quot;: &quot;The chunk entity carrying this chunk&#x27;s components.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;maze&quot;,
+                    &quot;lua_type&quot;: &quot;Maze&quot;,
+                    &quot;desc&quot;: &quot;The full 2D cell array for this chunk.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 100,
+                &quot;path&quot;: &quot;src/main/shared/components.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;GeneratedMazes&quot;,
+            &quot;desc&quot;: &quot;Every generated chunk, keyed by `\&quot;chunkX,chunkY\&quot;`.&quot;,
+            &quot;lua_type&quot;: &quot;{ [string]: GeneratedMaze }&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 113,
+                &quot;path&quot;: &quot;src/main/shared/components.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;BuildQueues&quot;,
+            &quot;desc&quot;: &quot;Deferred teardown, drained under a frame budget so a chunk unload never lands\nas one atomic hitch.&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;demolitionOrder&quot;,
+                    &quot;lua_type&quot;: &quot;{ Folder }&quot;,
+                    &quot;desc&quot;: &quot;Folders being torn down piecewise, newest last.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;demolishing&quot;,
+                    &quot;lua_type&quot;: &quot;{ [Folder]: boolean }&quot;,
+                    &quot;desc&quot;: &quot;Folders already claimed by demolition.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 124,
+                &quot;path&quot;: &quot;src/main/shared/components.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;BuildAssets&quot;,
+            &quot;desc&quot;: &quot;Shared handles the builder needs, resolved once by the `bootstrap` system.\n\nThese live in a component rather than as module upvalues because resolving\nthem means waiting on ServerStorage and creating instances — work that must\nnot happen at require time.&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;prefabRoot&quot;,
+                    &quot;lua_type&quot;: &quot;Instance&quot;,
+                    &quot;desc&quot;: &quot;`ServerStorage.Prefab.maze`, the source of every placeable model.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;mazeFolder&quot;,
+                    &quot;lua_type&quot;: &quot;Folder&quot;,
+                    &quot;desc&quot;: &quot;The workspace folder every chunk folder is parented to.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;wallTemplate&quot;,
+                    &quot;lua_type&quot;: &quot;Part&quot;,
+                    &quot;desc&quot;: &quot;Pre-styled part cloned for each wall run.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 142,
+                &quot;path&quot;: &quot;src/main/shared/components.luau&quot;
+            }
+        },
+        {
+            &quot;name&quot;: &quot;PrefabCache&quot;,
+            &quot;desc&quot;: &quot;Memoization for prefab inspection, which is pure but expensive enough that\nrecomputing it per placement shows up in a profile.&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;partCounts&quot;,
+                    &quot;lua_type&quot;: &quot;{ [Instance]: number }&quot;,
+                    &quot;desc&quot;: &quot;Memoized `BasePart` count per prefab.&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;warnedMissing&quot;,
+                    &quot;lua_type&quot;: &quot;{ [string]: boolean }&quot;,
+                    &quot;desc&quot;: &quot;`\&quot;folder/name\&quot;` keys already warned about.&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 157,
+                &quot;path&quot;: &quot;src/main/shared/components.luau&quot;
+            }
+        }
+    ],
+    &quot;name&quot;: &quot;components&quot;,
+    &quot;desc&quot;: &quot;Central jecs component registry. Every component, relationship and component\nsingleton used anywhere in the game is declared here, named for Jabby, and\nflagged for replication where the client needs it.&quot;,
+    &quot;tags&quot;: [
+        &quot;core&quot;
+    ],
+    &quot;source&quot;: {
+        &quot;line&quot;: 9,
+        &quot;path&quot;: &quot;src/main/shared/components.luau&quot;
+    }
+}</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#BuildAssets" class="table-of-contents__link toc-highlight">BuildAssets</a></li><li><a href="#BuildQueues" class="table-of-contents__link toc-highlight">BuildQueues</a></li><li><a href="#GeneratedMaze" class="table-of-contents__link toc-highlight">GeneratedMaze</a></li><li><a href="#GeneratedMazes" class="table-of-contents__link toc-highlight">GeneratedMazes</a></li><li><a href="#MazeConfig" class="table-of-contents__link toc-highlight">MazeConfig</a></li><li><a href="#MazeFrame" class="table-of-contents__link toc-highlight">MazeFrame</a></li><li><a href="#MazePosition" class="table-of-contents__link toc-highlight">MazePosition</a></li><li><a href="#MazeStreaming" class="table-of-contents__link toc-highlight">MazeStreaming</a></li><li><a href="#Placement" class="table-of-contents__link toc-highlight">Placement</a></li><li><a href="#PrefabCache" class="table-of-contents__link toc-highlight">PrefabCache</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Roblox-Duck-Studios. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

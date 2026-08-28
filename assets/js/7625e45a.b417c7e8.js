@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[4494],{7217:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"scheduler","desc":"The Planck scheduler every system runs under, wired to RunService phases and\\nto Jabby for live inspection.","tags":["core"],"source":{"line":9,"path":"src/main/shared/scheduler.luau"}}')}}]);

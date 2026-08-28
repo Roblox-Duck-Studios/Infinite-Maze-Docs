@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[1841],{38364:e=>{e.exports=JSON.parse('{"functions":[],"properties":[],"types":[],"name":"world","desc":"The single jecs world every system, component and entity belongs to.","tags":["core"],"source":{"line":9,"path":"src/main/shared/world.luau"}}')}}]);

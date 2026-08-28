@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[3026],{24773:e=>{e.exports=JSON.parse('[{"value":"Functions","id":"functions","level":2},{"value":".bootstrap","id":"bootstrap","level":3},{"value":".createBuildAssets","id":"createBuildAssets","level":3,"private":true},{"value":".findSlateVariant","id":"findSlateVariant","level":3,"private":true}]')}}]);
